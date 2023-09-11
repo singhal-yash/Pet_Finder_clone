@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="jquery.fullscreen-popup.js"></script>
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+
+
+
+
+  </style>
+</head>
+
+<body class="hs">
+  <div id="total-container" class="hs">
+  <div id="main-container">
+    <div id="powered-by-container">
+      <div id="powered-by-container-left" class="row">
+        <div id="powered-by-container-left-1" class="col-lg-4 col-md-12">
+          <div>POWERED BY <img src="./img/purina.jpg" alt="" id="purina"></div>
+        </div>
+        <div id="powered-by-container-left-2" class="show col-lg-8 col-md-12">
+          <a href="">Learn more </a>&nbsp; about how Purina and Petfinder are making a difference together.
+        </div>
+      </div>
+      <div id="powered-by-container-right">
+        <i id="powered-by-container-dropdown" class="fa-solid fa-angle-right" onclick="show_hidePoweredBy()"></i>
+      </div>
+    </div>
+    <!-- login-signup -logo container -->
+    <div id="logo-container">
+      <div id="logo-container-left">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div>
+              <img id="logo" href="#" src="./img/logo.jpg" height="45px">
+            </div>
+
+            <i id="heart" class="fa-solid fa-heart fa-2x"></i>
+            <button id="fs-options" onclick="showFullscreenMenu();" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span id="main-navbar-span" class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    ALL ABOUT PETS
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="dropdown-category">
+                    <!--  menu for drop down-->
+                    <div class="dropdown c-drop">
+                      <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Adopt or Get Involved
+                      </a>
+
+                      <ul class="dropdown-menu c-drop-menu" aria-labelledby="dropdownMenuLink1">
+                        <li><a class="dropdown-item" href="#">About Petfinder</a></li>
+                        <li><a class="dropdown-item" href="#">Adopting Pets</a></li>
+                        <li><a class="dropdown-item" href="#">Animal Shelters & Rescues</a></li>
+                        <li><a class="dropdown-item" href="#">Petfinder Foundation</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown c-drop">
+                      <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dogs & Puppies
+                      </a>
+
+                      <ul class="dropdown-menu c-drop-menu" aria-labelledby="dropdownMenuLink2">
+                        <li><a class="dropdown-item" href="#">Dog Adoption</a></li>
+                        <li><a class="dropdown-item" href="#">Dog Breeds</a></li>
+                        <li><a class="dropdown-item" href="#">Feeding Your Dog</a></li>
+                        <li><a class="dropdown-item" href="#">Dog Behavior</a></li>
+                        <li><a class="dropdown-item" href="#">Dog Health & Wellness</a></li>
+                        <li><a class="dropdown-item" href="#">Dog Training</a></li>
+                        <li><a class="dropdown-item" href="#">Other Dog Information</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown c-drop">
+                      <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink3"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Cats & Kittens
+                      </a>
+
+                      <ul class="dropdown-menu c-drop-menu" aria-labelledby="dropdownMenuLink3">
+                        <li><a class="dropdown-item" href="#">Cat Adoption</a></li>
+                        <li><a class="dropdown-item" href="#">Cat Breeds</a></li>
+                        <li><a class="dropdown-item" href="#">Feeding Your Cat</a></li>
+                        <li><a class="dropdown-item" href="#">Cat Behavior</a></li>
+                        <li><a class="dropdown-item" href="#">Cat Health & Wellness</a></li>
+                        <li><a class="dropdown-item" href="#">Cat Training</a></li>
+                        <li><a class="dropdown-item" href="#">Other Cat Information</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown c-drop">
+                      <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink4"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Other Types of Pets
+                      </a>
+
+                      <ul class="dropdown-menu c-drop-menu" aria-labelledby="dropdownMenuLink4">
+                        <li><a class="dropdown-item" href="#">Birds</a></li>
+                        <li><a class="dropdown-item" href="#">Exotic Pets</a></li>
+                        <li><a class="dropdown-item" href="#">Guinea Pigs</a></li>
+                        <li><a class="dropdown-item" href="#">Horses</a></li>
+                        <li><a class="dropdown-item" href="#">Rabbits</a></li>
+                        <li><a class="dropdown-item" href="#">Reptiles</a></li>
+                        <li><a class="dropdown-item" href="#">Small & Furry Pets</a></li>
+                      </ul>
+                    </div>
+                    <!-- menu end -->
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+      </div>
+      <div id="logo-container-right" class="">
+        <div id="sign-up">Sign Up</div>
+        <div id="login">Log In</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="main-box">
+    <div id="img-purple">
+      <div id="mb-image-container">
+        <img
+          src="https://www.petfinder.com/sites/default/files/styles/hero_image_1140_410/public/images/content/1140%20hero%20image_0.jpg?itok=wryBzVcI"
+          alt="">
+      </div>
+      <div id="purple-div"></div>
+    </div>
+
+    <div id="wrap-box">
+      <div id="search-container">
+        <div id="search-container-inner">
+          <input type="text" name="" id="search-pet" class="search-pc" placeholder="Enter City, State, or ZIP">
+          <div id="sheperator"></div>
+          <input type="text" name="" id="search-city" class="search-pc" placeholder="Search Terrier, Kitten, etc.">
+          <div id="serch-icon-container">
+            <div id="serch-icon"></div>
+          </div>
+        </div>
+      </div>
+      <div id="text-container">
+        <h1><span>Find your new best friend</span></h1>
+        <h5><span>Browse pets from our network of over 11,500 shelters and rescues.</span></h5>
+      </div>
+      <div id="small-card-container">
+        <div id="small-card-container-inner">
+          <div class="sc-container col-lg-3 col-md-3 col-sm-6 col-6">
+            <div class="sc-card">
+              <img src="./img/dog.jpg" alt="">
+              <p>Dogs</p>
+            </div>
+          </div>
+          <div class="sc-container col-lg-3 col-md-3 col-sm-6 col-6">
+            <div class="sc-card">
+              <img src="./img/cat.jpg" alt="">
+              <p>Cats</p>
+            </div>
+          </div>
+          <div class="sc-container col-lg-3 col-md-3 col-sm-6 col-6">
+            <div class="sc-card">
+              <img src="./img/foot1.jpg" alt="">
+              <p>Other Animals</p>
+            </div>
+          </div>
+          <div class="sc-container col-lg-3 col-md-3 col-sm-6 col-6">
+            <div class="sc-card">
+              <img src="./img/home.jpg" alt="">
+              <p>Shelter & Rescues</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- </div> -->
+  <!-- pet nearby 1 -->
+  <div class="pet-nearby">
+    <div class="pn-head">Pets Available for Adoption Nearby</div>
+    <div id="pn1-1" class="pn-card-container col-lg-3 col-md-4 col-6">
+      <div class="pn-card">
+        <div class="pn-img">
+          <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60641594/1/?bust=1679480330&width=316" alt="">
+        </div>
+        <div class="pn-curve"></div>
+        <div class="pn-name">Dada Shasha</div>
+      </div>
+    </div>
+    <div id="pn1-2" class="pn-card-container col-lg-3 col-md-4 col-6">
+      <div class="pn-card">
+        <div class="pn-img">
+          <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60122384/1/?bust=1679480390&width=316" alt="">
+        </div>
+        <div class="pn-curve"></div>
+        <div class="pn-name">Zelda</div>
+      </div>
+    </div>
+    <div id="pn1-3" class="pn-card-container col-lg-3 d-lg-block d-md-none col-6">
+      <div class="pn-card">
+        <div class="pn-img">
+          <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55078912/1/?bust=1679480421&width=316" alt="">
+        </div>
+        <div class="pn-curve"></div>
+        <div class="pn-name">Diana</div>
+      </div>
+    </div>
+    <div id="pn1-4" class="pn-card-container col-lg-3 col-md-4 col-6">
+      <div class="pn-card pn-spec">
+        <div class="pn-spec-img"></div>
+        <div class="pn-spec-desc">102 more pets available on Petfinder</div>
+        <div class="pn-spec-meet">MEET THEM</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="slider">
+    <div id="s-upper">
+      Planning to Adopt a Pet?
+
+    </div>
+    <div class="col-12 d-lg-none d-block" id="mySlider">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" id="slides-container-sm">
+          <div class="carousel-item active">
+            <div id="sl1" class="slide-card ">
+              <h5>Checklist for New Adopters</h5>
+              <p>Help make the transition, as smooth as possible</p>
+              <div>LEARN MORE</div>
+              <span></span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div id="sl2" class="slide-card ">
+              <h5>COVID-19 Resources</h5>
+              <p>Get the latest on adoption processes, learn how local shelters and resque groups are adapting and find
+                out what you can do help dogs and cats in need right now.</p>
+              <div>LEARN MORE</div>
+              <span></span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div id="sl3" class="slide-card ">
+              <h5>Pet Adoption FAQs</h5>
+              <p>Get answers to questions you haven't thought of.</p>
+              <div>LEARN MORE</div>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+          <i class="carousel-control-prev-icon fa-solid fa-angle-left fa-2x"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+          <i class="carousel-control-next-icon fa-solid fa-angle-right fa-2x"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="slides-container-lg" class="hs d-lg-block d-none">
+      <div id="slides-container-inner">
+        <div id="sl1" class="slide-card hide-slide">
+          <h5>Checklist for New Adopters</h5>
+          <p>Help make the transition, as smooth as possible</p>
+          <div>LEARN MORE</div>
+        </div>
+
+        <div id="sl2" class="slide-card hide-slide">
+          <h5>COVID-19 Resources</h5>
+          <p>Get the latest on adoption processes, learn how local shelters and resque groups are adapting and find out
+            what you can do help dogs and cats in need right now.</p>
+          <div>LEARN MORE</div>
+        </div>
+
+        <div id="sl3" class="slide-card hide-slide">
+          <h5>Pet Adoption FAQs</h5>
+          <p>Get answers to questions you haven't thought of.</p>
+          <div>LEARN MORE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pet-nearby">
+    <div class="pn-head">Pets Available for Adoption Nearby</div>
+    <div id="pn2-1" class="pn-card-container col-lg-3 col-md-4 col-6">
+      <div class="pn-card">
+        <div class="pn-img">
+          <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55063998/1/?bust=1679480427&width=316" alt="">
+        </div>
+        <div class="pn-curve"></div>
+        <div class="pn-name">Brad</div>
+      </div>
+    </div>
+    <div id="pn2-2" class="pn-card-container col-lg-3 col-md-4 col-6">
+      <div class="pn-card">
+        <div class="pn-img">
+          <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55063990/1/?bust=1679480388&width=316" alt="">
+        </div>
+        <div class="pn-curve"></div>
+        <div class="pn-name">Cooper</div>
+      </div>
+    </div>
+    <div id="pn2-3" class="pn-card-container col-lg-3 d-lg-block d-md-none col-6">
+      <div class="pn-card">
+        <div class="pn-img">
+          <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064014/1/?bust=1679480443&width=316" alt="">
+        </div>
+        <div class="pn-curve"></div>
+        <div class="pn-name">Nemo</div>
+      </div>
+    </div>
+    <div id="pn2-4" class="pn-card-container col-lg-3 col-md-4 col-6">
+      <div class="pn-card pn-spec">
+        <div class="pn-spec-img"></div>
+        <div class="pn-spec-desc">102 more pets available on Petfinder</div>
+        <div class="pn-spec-meet">MEET THEM</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="articles-card-container">
+    <div class="art-card-container col-lg-6 col-12">
+      <div class="art-card" id="art-card-1">
+        <div class="art-card-img">
+          <img
+            src="https://www.petfinder.com/sites/default/files/styles/card/public/images/content/47.jpeg?itok=HNT_yv1F"
+            alt="">
+        </div>
+        <div class="art-card-curve"></div>
+        <div class="art-card-desc">
+          <div class="art-card-simg">
+            <img
+              src="https://www.petfinder.com/sites/default/files/styles/card/public/images/content/47.jpeg?itok=HNT_yv1F"
+              alt="">
+          </div>
+          <h5>Dog Adoption Articles</h2>
+            <p>Learn more about caring for your new dog.</p>
+        </div>
+        <div id="art-card-readmore-1" class="art-card-readmore">READ MORE</div>
+      </div>
+    </div>
+    <div class="art-card-container col-lg-6 col-12">
+      <div class="art-card " id="art-card-2">
+        <div class="art-card-img">
+          <img
+            src="https://www.petfinder.com/sites/default/files/styles/card/public/images/content/PF2015_267_Kittens_Shelter-630.jpg?itok=JGTdJJaD"
+            alt="">
+        </div>
+        <div class="art-card-curve"></div>
+        <div class="art-card-desc">
+          <div class="art-card-simg">
+            <img
+              src="https://www.petfinder.com/sites/default/files/styles/card/public/images/content/PF2015_267_Kittens_Shelter-630.jpg?itok=JGTdJJaD"
+              alt="">
+          </div>
+          <h5>Cat Adoption Articles</h2>
+            <p>Helpful insights on what to expect.</p>
+        </div>
+        <div id="art-card-readmore-2" class="art-card-readmore">READ MORE</div>
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+    <div id="footer-purina">
+      <img src="./img/purina-footer.jpg" alt="">
+    </div>
+    <div id="footer-petfinder">
+      <img src="./img/perfinder-footer.jpg" alt="">
+    </div>
+    <div id="footer-upper">
+      <div id="fu-signup" class="col-lg-4 col-11">
+        <div id="fu-signup-card">
+          <div>To get the lastest on pet adoption and pet care, sign up for the Petfinder newsletter.</div>
+          <button>SIGN UP</button>
+        </div>
+      </div>
+      <!-- when screen size in lg -->
+      <div id="fu-desc" class="col-lg-8 col-12">
+        <div class="fu-desc-card">
+          <h5>RESOURCES</h5>
+          <p>
+            <a href=""> FAQs</a><br>
+            <a href="">Mobile App Download</a><br>
+            <a href="">Partnerships</a><br>
+            <a href="">News Center</a><br>
+            <a href="">Put Petfinder On Your Site</a><br>
+            <a href="">For Developers</a><br>
+            <a href="">Contact Us</a><br>
+          </p>
+        </div>
+        <div class="fu-desc-card">
+          <h5>ADOPT OR GET INVOLVED</h5>
+          <p>
+            <a href="">All Adopt or Get Involved</a><br>
+            <a href="">Adopting Pets</a><br>
+            <a href="">Animal Shelters & Rescues</a><br>
+            <a href="">Other Types of Pets</a><br>
+          </p>
+        </div>
+        <div class="fu-desc-card">
+          <h5>ABOUT DOGS & PUPPIES</h5>
+          <p>
+            <a href="">All About Dogs & Puppies</a><br>
+            <a href="">Dog Adoption</a><br>
+            <a href="">Dog Breeds</a><br>
+            <a href="">Feeding Your Dog</a><br>
+            <a href="">Dog Behavior</a><br>
+            <a href="">Dog Health & Wellness</a><br>
+            <a href="">Dog Training</a><br>
+            <a href="">Other Dog Information</a><br>
+          </p>
+        </div>
+        <div class="fu-desc-card">
+          <h5>ABOUT CATS & KITTENS</h5>
+          <p>
+            <a href="">All About Cats & Kittens</a><br>
+            <a href="">Cat Adoption</a><br>
+            <a href="">Cat Breeds</a><br>
+            <a href="">Feeding Your Cat</a><br>
+            <a href="">Cat Behavior</a><br>
+            <a href="">Cat Health & Wellness</a><br>
+            <a href="">Cat Training</a><br>
+            <a href="">Other Cat Information</a><br>
+          </p>
+        </div>
+
+      </div>
+      <div id="fu-desc-sm">
+        <!--  -->
+        <div>
+          <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false"
+            aria-controls="collapseExample">
+            RESOURCES
+          </button>
+          <div class="collapse" id="collapseExample1">
+            <div class=" card-body">
+              <a href=""> FAQs</a><br>
+              <a href="">Mobile App Download</a><br>
+              <a href="">Partnerships</a><br>
+              <a href="">News Center</a><br>
+              <a href="">Put Petfinder On Your Site</a><br>
+              <a href="">For Developers</a><br>
+              <a href="">Contact Us</a><br>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <div>
+          <button class="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2"
+            aria-expanded="false" aria-controls="collapseExample">
+            ADOPT OR GET INVOLVED
+          </button>
+          <div class="collapse" id="collapseExample2">
+            <div class=" card-body">
+              <a href="">All Adopt or Get Involved</a><br>
+              <a href="">Adopting Pets</a><br>
+              <a href="">Animal Shelters & Rescues</a><br>
+              <a href="">Other Types of Pets</a><br>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <div>
+          <button class="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3"
+            aria-expanded="false" aria-controls="collapseExample">
+            ABOUT DOGS & PUPPIES
+          </button>
+          <div class="collapse" id="collapseExample3">
+            <div class="card-body">
+              <a href="">All About Dogs & Puppies</a><br>
+              <a href="">Dog Adoption</a><br>
+              <a href="">Dog Breeds</a><br>
+              <a href="">Feeding Your Dog</a><br>
+              <a href="">Dog Behavior</a><br>
+              <a href="">Dog Health & Wellness</a><br>
+              <a href="">Dog Training</a><br>
+              <a href="">Other Dog Information</a><br>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <div>
+          <button class="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4"
+            aria-expanded="false" aria-controls="collapseExample">
+            ABOUT CATS & KITTENS
+          </button>
+          <div class="collapse" id="collapseExample4">
+            <div class="card-body">
+              <a href="">All About Cats & Kittens</a><br>
+              <a href="">Cat Adoption</a><br>
+              <a href="">Cat Breeds</a><br>
+              <a href="">Feeding Your Cat</a><br>
+              <a href="">Cat Behavior</a><br>
+              <a href="">Cat Health & Wellness</a><br>
+              <a href="">Cat Training</a><br>
+              <a href="">Other Cat Information</a><br>
+            </div>
+          </div>
+        </div>
+        <div id="bt"></div>
+        <!--  -->
+      </div>
+    </div>
+    <div id="footer-sitemap">
+      <div>
+        <a href="">Shelter & Rescue Registration </a>|
+        <a href="">Sitemap</a>|
+        <a href="">Terms of Service</a>|
+        <a href="">Notice at Collection</a>|
+        <a href="">Privacy Policy (updated)</a>|
+        <a href="">About Our Ads</a>|
+        <a href="">Do Not Sell Or Share My Personal Information</a>
+
+      </div>
+
+
+    </div>
+    <div id="footer-lower">
+      <div class="col-lg-3 col-12" id="fl-social">
+        <i class="fa-brands fa-facebook-f fa-xl"></i>
+        <i class="fa-brands fa-twitter fa-xl"></i>
+        <i class="fa-brands fa-instagram fa-xl"></i>
+        <i class="fa-brands fa-youtube fa-xl"></i>
+        <i class="fa-brands fa-pinterest-p fa-xl"></i>
+      </div>
+      <div class="col-lg-9 col-12" id="fl-desc">©2023 Petfinder.com
+        All trademarks are owned by Société des Produits Nestlé S.A., or used with permission.</div>
+    </div>
+  </footer>
+</div>
+<div id="popup-container" class="d-lg-none">
+  <div id="option-container">
+    <div class="popup-header"><i onclick="hideMainPopup();" class="fa-solid fa-xmark fa-2x"></i></div>
+  <div class="popup-body">
+    <div class="p-m-opt-container" onclick="showSuboption(0);">
+      <p>Adopt or Get Involved</p>
+      <span class="fa-solid fa-angle-right fa"></span>
+    </div>
+    <div class="p-m-opt-container" onclick="showSuboption(1);">
+      <p>Dogs & Puppies</p>
+      <span class="fa-solid fa-angle-right "></span>
+    </div>
+    <div class="p-m-opt-container" onclick="showSuboption(2);">
+      <p>Cats & Kittens</p>
+      <span class="fa-solid fa-angle-right "></span>
+    </div>
+    <div class="p-m-opt-container" onclick="showSuboption(3);">
+      <p>Other Types of Pets</p>
+      <span class="fa-solid fa-angle-right "></span>
+    </div>
+  </div>
+  <div id="popup-lower">
+    <div>Sign Up</div>
+    <div>Log In</div>
+  </div>
+  <div id="overlay-suboption">
+    <div class="popup-header">
+      <span onclick="hideSubPopup();" class="fa-solid fa-angle-left fa-2x"></span>
+      <i onclick="hideMainPopup();" class="fa-solid fa-xmark fa-2x"></i>
+    </div>
+    <div id="set-sub-popup" class="popup-body">
+      <div class="p-m-opt-container" >
+        <p>All About Other Types of Pets</p>
+      </div>
+      <div class="p-m-opt-container">
+        <p>Birds</p>
+      </div>
+      <div class="p-m-opt-container" >
+        <p>Exotic Pets</p>
+      </div>
+      <div class="p-m-opt-container" >
+        <p>Guinea Pigs</p>
+      </div>
+      <div class="p-m-opt-container" >
+        <p>Horses</p>
+      </div>
+      <div class="p-m-opt-container" >
+        <p>Rabbits</p>
+      </div>
+      <div class="p-m-opt-container" >
+        <p>Reptiles</p>
+      </div>
+      <div class="p-m-opt-container" >
+        <p>Small & Furry Pets</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+</div>
+</body>
+
+<script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>
